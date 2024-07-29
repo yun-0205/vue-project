@@ -1,0 +1,30 @@
+{
+  "token": {
+    "colorPrimary": "#235789",
+    "colorSuccess": "#51af28",
+    "colorWarning": "#e8b900",
+    "colorError": "#d32c1d",
+    "colorInfo": "#2b5cff",
+    "colorTextBase": "#262626",
+    "wireframe": false,
+    "colorBgLayout": "#F2F6F8"
+  },
+  "components": {
+    "Menu": {
+      "colorItemBg": "#235789",
+      "colorItemText": "#FFFFFF",
+      "colorItemTextHover": "#FFFFFF",
+      "colorText": "rgba(38, 38, 38, 0.88)",
+      "colorGroupTitle": "#FFFFFF",
+      "colorPrimary": "#235789",
+      "colorItemBgHover": "rgba(0, 0, 0, 0.06)",
+      "colorItemTextHoverHorizontal": "#1677ff",
+      "colorItemTextSelected": "#FFFFFF",
+      "colorItemBgActive": "#rgba(0, 0, 0, 0.06)",
+      "colorItemBgSelected": "#518BB8",
+      "colorDangerItemBgActive": "#fff2f0",
+      "colorDangerItemBgSelected": "#518BB8",
+      "colorItemTextDisabled": "#BDBDBD"
+    }
+  }
+}
