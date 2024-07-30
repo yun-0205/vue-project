@@ -25,6 +25,12 @@
       "colorDangerItemBgActive": "#fff2f0",
       "colorDangerItemBgSelected": "#518BB8",
       "colorItemTextDisabled": "#BDBDBD"
+    },
+    "Table": {
+      "colorFillAlter": "#D4ECF9",
+      "colorBgContainer": "#ffffff",
+      "colorBorderSecondary": "#f0f0f0",
+      "colorFillContent": "rgba(38, 38, 38, 0.06)"
     }
   }
 }

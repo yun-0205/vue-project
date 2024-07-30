@@ -6,6 +6,45 @@ import customTheme from "./customTheme.json";
 const selectedKeys1 = ref(['2']);
 const selectedKeys2 = ref(['1']);
 const openKeys = ref(['sub1']);
+
+const columns = [
+  {
+    title: 'LicenseID',
+    dataIndex: 'licenseid',
+    width: 240,
+  },
+  {
+    title: 'Organization',
+    dataIndex: 'organization',
+    width: 240,
+  },
+  {
+    title: 'Expire Time',
+    dataIndex: 'expiretime',
+    width: 240,
+  },
+];
+
+const data = [
+  {
+    key: 1,
+    licenseid: 'KX-keyper-20231128s01',
+    organization: 'Abstergo Ltd.',
+    expiretime: '2023/03/15',
+  },
+  {
+    key: 2,
+    licenseid: 'KX-keyper-20231128s01',
+    organization: 'Biffco Enterprises Ltd.',
+    expiretime: '2023/12/18',
+  },
+  {
+    key: 3,
+    licenseid: 'KX-keyper-20231128s01',
+    organization: 'Acme Co.',
+    expiretime: '2023/02/20',
+  },
+];
 </script>
 
 <template>
@@ -59,7 +98,12 @@ const openKeys = ref(['sub1']);
         <a-layout-content
           :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
         >
-          Content
+        <a-table
+        :columns="columns"
+        :data-source="data"
+        :pagination="{ pageSize: 10 }"
+        :scroll="{ y: 560 }"
+        />
         </a-layout-content>
       </a-layout>
     </a-layout>
@@ -133,5 +177,9 @@ const openKeys = ref(['sub1']);
   margin-right: 4px;
   vertical-align: middle;
   margin-bottom: 3px;
+}
+
+.ant-table-wrapper >>> tr:hover {   
+  background-color: red; 
 }
 </style>
