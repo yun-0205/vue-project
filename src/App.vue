@@ -12,35 +12,46 @@ const columns = [
     title: 'LicenseID',
     dataIndex: 'licenseid',
     width: 240,
+    // customCell: customCell,
   },
   {
     title: 'Organization',
     dataIndex: 'organization',
     width: 240,
+    // customCell: customCell,
   },
   {
     title: 'Expire Time',
     dataIndex: 'expiretime',
-    width: 240,
+    // customCell: customCell,
   },
 ];
+
+// const customCell = (column, index) => {
+//   if (index % 2 === 1) {
+//     return {
+//       class: 'custom-row',
+//     }
+//   }
+//   return {}
+// };
 
 const data = [
   {
     key: 1,
-    licenseid: 'KX-keyper-20231128s01',
+    licenseid: 'KX-20231128s01',
     organization: 'Abstergo Ltd.',
     expiretime: '2023/03/15',
   },
   {
     key: 2,
-    licenseid: 'KX-keyper-20231128s01',
+    licenseid: 'KX-20231128s01',
     organization: 'Biffco Enterprises Ltd.',
     expiretime: '2023/12/18',
   },
   {
     key: 3,
-    licenseid: 'KX-keyper-20231128s01',
+    licenseid: 'KX-20231128s01',
     organization: 'Acme Co.',
     expiretime: '2023/02/20',
   },
@@ -52,7 +63,7 @@ const data = [
   :theme="customTheme">
   </a-config-provider>
 
-  <a-layout>
+  <a-layout class="layout">
     <a-layout-header class="header">
       <div class="logo">
         <img src="./assets/icon/logo.svg">
@@ -90,15 +101,13 @@ const data = [
         </a-menu>
       </a-layout-sider>
       <a-layout style="padding: 0 24px 24px">
-        <a-breadcrumb style="margin: 16px 0">
-          <a-breadcrumb-item>Home</a-breadcrumb-item>
-          <a-breadcrumb-item>List</a-breadcrumb-item>
-          <a-breadcrumb-item>App</a-breadcrumb-item>
-        </a-breadcrumb>
+        <a-page-header class="title"
+        title="Products"
+        />
         <a-layout-content
           :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
         >
-        <a-table
+        <a-table 
         :columns="columns"
         :data-source="data"
         :pagination="{ pageSize: 10 }"
@@ -147,6 +156,10 @@ const data = [
   font-size: 30px;
 }
 
+.title {
+  padding: 16px 0px;
+}
+
 .logo1 {
   width: 16px;
   height: 16px;
@@ -179,7 +192,11 @@ const data = [
   margin-bottom: 3px;
 }
 
-.ant-table-wrapper >>> tr:hover {   
+/* .custom-row {
+  background-color: red;
+} */
+
+/* .ant-table-wrapper >>> tr:hover {   
   background-color: red; 
-}
+} */
 </style>
