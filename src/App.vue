@@ -5,9 +5,8 @@
 <template>
   <a-config-provider
   :theme="customTheme">
-    <router-view></router-view>
+    <router-view />
   </a-config-provider>
 
   
 </template>
-

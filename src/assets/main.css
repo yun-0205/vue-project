@@ -21,12 +21,12 @@ a,
   padding: 3px;
 }
 
-@media (hover: hover) {
+/* @media (hover: hover) {
   a:hover {
     background-color: #D4ECF9;
     border-radius: 6px;
   }
-}
+} */
 
 @media (min-width: 1024px) {
   body {

@@ -1,19 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import DashView from '@/views/DashView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'dash',
-      component: DashView
+      name: 'home',
+      component: () => import('../views/Home.vue')
     },
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   component: () => import('../views/AboutView.vue')
-    // }
+    {
+      path: '/products1',
+      name: 'products1',
+      component: () => import('../views/Products1.vue')
+    },
   ]
 })
 
