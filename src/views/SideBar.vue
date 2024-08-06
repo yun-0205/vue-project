@@ -1,20 +1,23 @@
 <script setup>
 import { ref } from 'vue';
 
-const selectedKeys1 = ref(['2']);
-const selectedKeys2 = ref(['1']);
-const openKeys = ref(['sub1']);
+const selectedKeys1 = ref(['1']);
+const selectedKeys2 = ref(['2']);
+const openKeys = ref([]);
 </script>
 
 <template>
-<a-layout-sider width="240">
+<a-layout-sider width="240"
+    
+    >
     <a-menu
-    v-model:selectedKeys="selectedKeys2"
+    v-model:selectedKeys="selectedKeys1"
     v-model:openKeys="openKeys"
     mode="inline"
     :style="{ height: '100%', borderRight: 0 }"
     >
-        <a-sub-menu key="sub1">
+        <a-sub-menu key="sub1"
+        >
         <template #title>
             <span>
             <img class="productIcon" src="../assets/icon/products.svg">

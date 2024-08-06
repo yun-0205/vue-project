@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import SideBar from './SideBar.vue';
+import Header from './Header.vue';
 
 const columns = [
   {
@@ -43,12 +44,7 @@ const data = [
 
 <template>
   <a-layout class="layout">
-  <a-layout-header class="header">
-    <div class="logo">
-    <img src="../assets/icon/logo.svg">
-    <h1>License</h1>
-    </div>
-  </a-layout-header>
+    <Header />
   <a-layout>
     <SideBar />
     <a-layout style="padding: 0 24px 24px">
@@ -71,34 +67,17 @@ const data = [
 </template>
 
 <style scoped>
-.header {
-  background-color: #fff;
-  box-shadow: 0px 1px 6px #00000015;
-  z-index: 10;
-  position: relative;
-}
-
-.logo {
-  display: flex;
-  justify-content: center;
-  color: #235789;
-}
-
-.logo h1 {
-  font-weight: 800;
-  margin-left: 8px;
-  font-size: 30px;
-}
-
 .title {
   padding: 16px 0px;
 }
 
-/* .ant-table-wrapper >>> tr:hover {   
-  background-color: red; 
-} */
+::v-deep(.ant-pagination-item:hover) {
+  background-color: #D4ECF9;
+}
 
-/* ::v-deep .test .ant-table-tbody > tr:hover > td {
-  background-color: #F7F7F7;
-} */
+::v-deep(.ant-table-thead .ant-table-cell) {
+  background-color: #D4ECF9;
+  border: none;
+  box-shadow: none;
+}
 </style>
