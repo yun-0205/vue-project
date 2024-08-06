@@ -14,8 +14,8 @@ const columns = [
     width: 240,
   },
   {
-    title: 'Expire Time',
-    dataIndex: 'expiretime',
+    title: 'Accounts',
+    dataIndex: 'accounts',
     width: 240,
   },
   ];
@@ -25,19 +25,19 @@ const data = [
     key: 1,
     licenseid: 'KX-20231128s01',
     organization: 'Abstergo Ltd.',
-    expiretime: '2023/03/15',
+    accounts: 10,
   },
   {
     key: 2,
     licenseid: 'KX-20231128s01',
     organization: 'Biffco Enterprises Ltd.',
-    expiretime: '2023/12/18',
+    accounts: 20,
   },
   {
     key: 3,
     licenseid: 'KX-20231128s01',
     organization: 'Acme Co.',
-    expiretime: '2023/02/20',
+    accounts: 50,
   },
   ];
 </script>

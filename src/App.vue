@@ -1,5 +1,5 @@
 <script setup>
-  import customTheme from "./customTheme.json";
+import customTheme from "./customTheme.json";
 </script>
 
 <template>
@@ -7,6 +7,4 @@
   :theme="customTheme">
     <router-view />
   </a-config-provider>
-
-  
 </template>

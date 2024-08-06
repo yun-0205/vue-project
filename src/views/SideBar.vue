@@ -1,23 +1,44 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, watch } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 
-const selectedKeys1 = ref(['1']);
-const selectedKeys2 = ref(['2']);
+const selectedKeys = ref([]);
 const openKeys = ref([]);
+const route = useRoute();
+
+const updateSelectedKeys = () => {
+  const path = route.path;
+  if (path.includes('products1')) {
+    selectedKeys.value = ['1'];
+    openKeys.value = ['sub1'];
+  } else if (path.includes('products2')) {
+    selectedKeys.value = ['2'];
+    openKeys.value = ['sub1'];
+  } else if (path.includes('User1')) {
+    selectedKeys.value = ['3'];
+    openKeys.value = ['sub2'];
+  } else if (path.includes('User2')) {
+    selectedKeys.value = ['4'];
+    openKeys.value = ['sub2'];
+  } else {
+    openKeys.value = [];
+  }
+};
+
+onMounted(updateSelectedKeys);
+
+watch(route, updateSelectedKeys);
 </script>
 
 <template>
-<a-layout-sider width="240"
-    
-    >
+<a-layout-sider width="240">
     <a-menu
-    v-model:selectedKeys="selectedKeys1"
+    v-model:selectedKeys="selectedKeys"
     v-model:openKeys="openKeys"
     mode="inline"
     :style="{ height: '100%', borderRight: 0 }"
     >
-        <a-sub-menu key="sub1"
-        >
+        <a-sub-menu key="sub1">
         <template #title>
             <span>
             <img class="productIcon" src="../assets/icon/products.svg">
@@ -25,7 +46,7 @@ const openKeys = ref([]);
             </span>
         </template>
         <a-menu-item key="1"><img class="logo1" src="../assets/icon/logo1.svg"><RouterLink to="/products1">products1</RouterLink></a-menu-item>
-        <a-menu-item key="2"><img class="logo2" src="../assets/icon/logo2.svg">Products2</a-menu-item>
+        <a-menu-item key="2"><img class="logo2" src="../assets/icon/logo2.svg"><RouterLink to="/products2">products2</RouterLink></a-menu-item>
         </a-sub-menu>
         <a-sub-menu key="sub2">
         <template #title>
