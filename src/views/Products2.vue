@@ -1,6 +1,7 @@
 <script setup>
 import SideBar from './SideBar.vue';
 import Header from './Header.vue';
+import Primary_Button from '@/components/Primary_Button.vue';
 
 const columns = [
   {
@@ -52,7 +53,7 @@ const data = [
         <a-page-header class="title"
         title="Products1"
         />
-        <button>Add License</button>
+        <Primary_Button />
       </div>
     <a-table 
     :columns="columns"
@@ -97,19 +98,5 @@ const data = [
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.container button {
-  background-color: #235789;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  width: 120px;
-  height: 40px;
-}
-
-.container button:hover {
-  background-color: #518BB8;
-  cursor: pointer;
 }
 </style>

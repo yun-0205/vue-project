@@ -1,6 +1,8 @@
 <script setup>
 import SideBar from './SideBar.vue';
 import Header from './Header.vue';
+import eyeIcon from "../assets/icon/eye.svg";
+import Primary_Button from '@/components/Primary_Button.vue';
 
 const columns = [
   {
@@ -18,6 +20,11 @@ const columns = [
     dataIndex: 'expiretime',
     width: 240,
   },
+  {
+    title: 'Action',
+    dataIndex: 'action',
+    width: 240,
+  },
   ];
 
 const data = [
@@ -26,18 +33,35 @@ const data = [
     licenseid: 'KX-20231128s01',
     organization: 'Abstergo Ltd.',
     expiretime: '2023/03/15',
+    action: 'test'
   },
   {
     key: 2,
     licenseid: 'KX-20231128s01',
     organization: 'Biffco Enterprises Ltd.',
     expiretime: '2023/12/18',
+    action: 'test'
   },
   {
     key: 3,
     licenseid: 'KX-20231128s01',
     organization: 'Acme Co.',
     expiretime: '2023/02/20',
+    action: 'test'
+  },
+  {
+    key: 4,
+    licenseid: 'KX-20231128s01',
+    organization: 'Binford Ltd.',
+    expiretime: '2023/07/03',
+    action: 'test'
+  },
+  {
+    key: 5,
+    licenseid: 'KX-20231128s01',
+    organization: 'Biffco Enterprises Ltd.',
+    expiretime: '2023/11/25',
+    action: 'test'
   },
   ];
 </script>
@@ -52,7 +76,7 @@ const data = [
         <a-page-header class="title"
         title="Products1"
         />
-        <button>Add License</button>
+        <Primary_Button />
       </div>
     <a-table 
     :columns="columns"
@@ -97,19 +121,5 @@ const data = [
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.container button {
-  background-color: #235789;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  width: 120px;
-  height: 40px;
-}
-
-.container button:hover {
-  background-color: #518BB8;
-  cursor: pointer;
 }
 </style>
