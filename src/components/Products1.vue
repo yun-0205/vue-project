@@ -1,6 +1,7 @@
 <script setup>
-import SideBar from './SideBar.vue';
-import Header from './Header.vue';
+import SideBar from '../components/SideBar.vue';
+import Header from '../components/Header.vue';
+import eyeIcon from "../assets/icon/eye.svg";
 import Primary_Button from '@/components/Primary_Button.vue';
 
 const columns = [
@@ -15,54 +16,74 @@ const columns = [
     width: 240,
   },
   {
-    title: 'Accounts',
-    dataIndex: 'accounts',
+    title: 'Expire Time',
+    dataIndex: 'expiretime',
     width: 240,
   },
-  ];
+  {
+    title: 'Action',
+    dataIndex: 'action',
+    width: 240,
+  },
+];
 
 const data = [
   {
     key: 1,
     licenseid: 'KX-20231128s01',
     organization: 'Abstergo Ltd.',
-    accounts: 10,
+    expiretime: '2023/03/15',
+    action: 'test'
   },
   {
     key: 2,
     licenseid: 'KX-20231128s01',
     organization: 'Biffco Enterprises Ltd.',
-    accounts: 20,
+    expiretime: '2023/12/18',
+    action: 'test'
   },
   {
     key: 3,
     licenseid: 'KX-20231128s01',
     organization: 'Acme Co.',
-    accounts: 50,
+    expiretime: '2023/02/20',
+    action: 'test'
   },
-  ];
+  {
+    key: 4,
+    licenseid: 'KX-20231128s01',
+    organization: 'Binford Ltd.',
+    expiretime: '2023/07/03',
+    action: 'test'
+  },
+  {
+    key: 5,
+    licenseid: 'KX-20231128s01',
+    organization: 'Biffco Enterprises Ltd.',
+    expiretime: '2023/11/25',
+    action: 'test'
+  },
+];
 </script>
 
 <template>
   <a-layout class="layout">
     <Header />
-  <a-layout>
-    <SideBar />
-    <a-layout style="padding: 0 24px 24px">
-      <div class="container">
-        <a-page-header class="title"
-        title="Products1"
+    <a-layout>
+      <SideBar />
+      <a-layout style="padding: 0 24px 24px">
+        <div class="container">
+          <a-page-header class="title" title="Products1" />
+          <Primary_Button />
+        </div>
+        <a-table
+        :columns="columns"
+        :data-source="data"
+        :pagination="{ pageSize: 10 }"
+        :scroll="{ x: false }"
         />
-        <Primary_Button />
-      </div>
-    <a-table 
-    :columns="columns"
-    :data-source="data"
-    :pagination="{ pageSize: 10 }"
-    :scroll="{ x: false }"
-    />
+      </a-layout>
     </a-layout>
-  </a-layout>
   </a-layout>
 </template>
 

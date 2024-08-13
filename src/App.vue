@@ -5,6 +5,7 @@ import customTheme from "./customTheme.json";
 <template>
   <a-config-provider
   :theme="customTheme">
+  
     <router-view />
   </a-config-provider>
 </template>

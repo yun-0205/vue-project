@@ -11,14 +11,23 @@ const router = createRouter({
     {
       path: '/products1',
       name: 'products1',
-      component: () => import('../views/Products1.vue')
+      component: () => import('../components/Products1.vue')
     },
     {
       path: '/products2',
       name: 'products2',
-      component: () => import('../views/Products2.vue')
+      component: () => import('../components/Products2.vue')
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: () => import('../components/test.vue')
+    },
+    { path: '/:pathMatch(.*)*',
+      name: 'NotFound',
+      component: () => import('../views/404.vue')
     },
   ]
 })
 
-export default router
+export default router;
