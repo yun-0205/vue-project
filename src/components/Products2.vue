@@ -1,7 +1,7 @@
 <script setup>
 import SideBar from '../components/SideBar.vue';
 import Header from '../components/Header.vue';
-import Primary_Button from '@/components/Primary_Button.vue';
+import Primary_Btn from '@/components/Primary_Btn.vue';
 
 const columns = [
   {
@@ -51,7 +51,7 @@ const data = [
       <a-layout style="padding: 0 24px 24px">
         <div class="container">
           <a-page-header class="title" title="Products1" />
-          <Primary_Button />
+          <Primary_Btn />
         </div>
         <a-table
         :columns="columns"

@@ -46,10 +46,10 @@ watch(() => route.path, updateMenuState);
             Products
           </span>
         </template>
-        <a-menu-item key="1"><img class="logo1" src="../assets/icon/icon1.svg">
+        <a-menu-item key="1"><img class="icon1" src="../assets/icon/icon1.svg">
           <RouterLink to="/products1">products1</RouterLink>
         </a-menu-item>
-        <a-menu-item key="2"><img class="logo2" src="../assets/icon/icon2.svg">
+        <a-menu-item key="2"><img class="icon2" src="../assets/icon/icon2.svg">
           <RouterLink to="/products2">products2</RouterLink>
         </a-menu-item>
       </a-sub-menu>
@@ -68,7 +68,7 @@ watch(() => route.path, updateMenuState);
 </template>
 
 <style scoped>
-.logo1 {
+.icon1 {
   width: 16px;
   height: 16px;
   margin-right: 4px;
@@ -76,7 +76,7 @@ watch(() => route.path, updateMenuState);
   margin-bottom: 3px;
 }
 
-.logo2 {
+.icon2 {
   width: 16px;
   height: 16px;
   margin-right: 4px;

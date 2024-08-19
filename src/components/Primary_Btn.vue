@@ -1,4 +1,3 @@
-
 <template>
     <button>Add License</button>
 </template>
