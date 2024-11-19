@@ -50,7 +50,7 @@ const data = [
       <SideBar />
       <a-layout style="padding: 0 24px 24px">
         <div class="container">
-          <a-page-header class="title" title="Products1" />
+          <a-page-header class="title" title="Products2" />
           <Primary_Btn />
         </div>
         <a-table
